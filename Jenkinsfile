@@ -22,7 +22,7 @@ pipeline {
       when { branch "master" }
       steps {
         echo '====++++executing Deliver for development++++===='
-        winRMClient credentialsId: 'c1c51fc9-786f-404c-b629-1a01e1203758', hostName: 'w-wagendamentos.clinicasim.local', winRMOperations: [sendFile(configurationName: 'DataNoLimits', destination: 'C:\\Webs\\Prod\\chatbot.clinicasim.com\\new_version', source: "${env.WORKSPACE}\\target\\demo.0.0.1.war")]    
+        winRMClient credentialsId: 'c1c51fc9-786f-404c-b629-1a01e1203758', hostName: 'w-wagendamentos.clinicasim.local', winRMOperations: [sendFile(configurationName: 'DataNoLimits', destination: 'C:\\Webs\\Prod\\chatbot.clinicasim.com\\new_version', source: "${env.WORKSPACE}\\target\\demo-0.0.1.war")]    
       }
     }
 
